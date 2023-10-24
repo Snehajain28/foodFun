@@ -1,12 +1,17 @@
 import Navbar from "../components/Navbar";
-import Footer from "./Footer";
+import Footer from "../components/Footer";
+import Cards from "../components/Cards";
+import Carousel from "../components/Carousel";
+import { Data } from "../data/foodData";
 
 export default function Home () {
 
-    return(<div>
+    return(<div className="w-screen">
        <Navbar/>
-
-<div>body</div>
+    <Carousel/>
+       <div>
+        <Cards Data={Data}></Cards>
+       </div>
 <Footer/>
     </div>)
 
