@@ -10,7 +10,7 @@ export const Data =
                     "full": "220"
                 }
             ],
-            "description": "A dosa is a thin savory crepe in South Indian cuisine made from a fermented batter of ground black lentils and rice. Dosas are served hot, often with chutney and sambar. Dosa is a signature dish in South India and Sri Lanka, and is popularly served in their respective restaurants around the world."
+           
         },
         {
             "CategoryName": "Fast Food",
@@ -22,7 +22,7 @@ export const Data =
                     "full": "200"
                 }
             ],
-            "description": "A sandwich is a food typically consisting of vegetables, sliced cheese or meat, placed on or between slices of bread, or more generally any dish wherein bread serves as a container or wrapper for another food type.[1][2][3] The sandwich began as a portable, convenient finger food in the Western world, though over time it has become prevalent worldwide."
+           
         },
         {
             "CategoryName": "Fast Food",
@@ -34,7 +34,7 @@ export const Data =
                     "full": "320"
                 }
             ],
-            "description": "Momos are a type of steamed filled dumpling in Tibetan and Nepali cuisine that is also popular in neighbouring Bhutan and India. Momos are usually served Momo is an Indian chain of fast food restaurants headquartered in Kolkata. The chain specializes in momos, momo-filled burgers (MoBurgs) and momo-based"
+        
         },
         {
             "CategoryName": "Desert",

@@ -1,9 +1,9 @@
 import { useState } from "react";
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import axios from "axios";
 
 export default  function Signup() {
-    
+    const navigate = useNavigate();
   const [formData, setformData] = useState({
         name: "",
         email: "",
@@ -20,7 +20,7 @@ export default  function Signup() {
    e.preventDefault();
     const response = axios.post('http://localhost:5000/api/v1/createuser' , {name:formData.name ,email:formData.email,location:formData.location,password:formData.password}
     )
-    
+    navigate('/')
 }
 
 
