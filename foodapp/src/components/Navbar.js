@@ -1,20 +1,26 @@
 
-import { useRef, useState } from "react";
+
+import { AiOutlineShoppingCart } from "react-icons/ai"
 import { Link } from "react-router-dom";
 import { RxCross2 } from 'react-icons/rx'
 import { GiHamburgerMenu } from 'react-icons/gi'
+import { useState } from "react";
 
+export default function Navbar({login ,setLogin}) {
 
-export default function Navbar() {
-
-
-
-  const [click, setClick] = useState(true);
+ const [click, setClick] = useState(true);
 const handleham = () => {
     setClick(!click);
  }
  const style = click?"hidden":"hamburger";
 
+ const handlescroll =() => {
+  window.scrollTo({top:5000,behavior:"smooth"})
+ }
+
+ const handleLog = () => {
+ setLogin(!login)
+ }
   return (<div className="relative bg-black bg-opacity-50 h-18 text-white ittalic font-bold"> 
 
 
@@ -33,26 +39,49 @@ const handleham = () => {
     </button>
     </div>
 
-    <div className=" " >
+    <div className="text-black " >
       
-      <ul className={`${style} md:flex md:flex-row md:items-center gap-[4vw]`}>
-        <li>
-          <Link to="/home" className=" py-2 pl-3 pr-4 text-gray-900  md:text-white md:p-0" >Home</Link>
+      <ul className={`${style}   md:flex md:flex-row md:items-center gap-[4vw]`}>
+     
+       <li>
+          <Link to="/"  >Home</Link>
+        </li>
+       <li>
+          <Link to="/menu">Menu</Link>
         </li>
         <li>
-          <Link to="/about" className=" py-2 pl-3 pr-4 text-gray-900  hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 ">Menu</Link>
+          <Link to="/specials" >Specials</Link>
         </li>
-        <li>
-          <Link to="/services" className=" py-2 pl-3 pr-4 text-gray-900  hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0  ">Specials</Link>
+        <li className="select-none"
+         onClick={handlescroll}
+           >Contact
         </li>
-        <li>
-          <Link to="/contact" className=" py-2 pl-3 pr-4 text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 ">Contact</Link>
-        </li>
-        <li>
-          <Link to="/createuser" className=" py-2 pl-3 pr-4 text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 ">Sign Up</Link>
-        </li>
+       <li>{ 
+        !login ?
+         ( <Link to="/createuser" >Sign Up</Link>
+       ):(<diiv></diiv>)} </li>
+   
+        <li>{   
+        !login?
+         ( <Link to="/login">Log In</Link>
+        ):(<div></div>)} </li>
+
+<li> { 
+   login ? 
+       <Link to="/">My Orders</Link>:null
+   }</li> 
+   <li> {
+      login &&
+      ( <Link to="/" onClick={handleLog}>Log Out</Link>
+    )}  </li> 
+     
+
       </ul>
     </div>
+  <div> { login &&
+    <AiOutlineShoppingCart size={40}/>
+  }
+   </div>
   </div >
 </nav >
 

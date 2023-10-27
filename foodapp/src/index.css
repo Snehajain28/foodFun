@@ -11,7 +11,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
  overflow-x: hidden;
-
+background-color: black;
   }
 
   .image{
@@ -23,7 +23,8 @@ body {
   }
   @media only screen and (max-width: 700px) {
    .hamburger {
-     height: 15rem;
+     height: 17rem;
+     border:2px solid black;
      width: 15rem;
      padding-top: 2rem;
      text-align: center;
@@ -39,9 +40,7 @@ margin-left: -13.5rem;
   .hamburger > li{
     padding: 6px;
   }
-.image{
-background-color: #212121;
-}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -52,14 +51,28 @@ code {
 } 
 @keyframes fadeAnime {
   from {
+    transform: translateX(-10%);
     opacity: 0;
   }
   to{
+    transform: translateX(0);
     opacity: 1;
   }
 }
-.show{
-  display: block;
-  
+
+.login{
+height: 100vh;
+width:100vw;
+background-size: cover;
+background-repeat: no-repeat;
+  background-image: url("https://i.pinimg.com/1200x/fa/61/07/fa610763f8007b711ec710aef08b0e15.jpg");
 }
 
+.signin{
+background-size: cover;
+height:100vh;
+  background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYCv3Q8xr15aquOFTKhJ1OvtvLfJ5u21nHwvXJw_DXmA4SxiblcLxiHz5fVOh1z6Jjmfk&usqp=CAU");
+  }
+  
